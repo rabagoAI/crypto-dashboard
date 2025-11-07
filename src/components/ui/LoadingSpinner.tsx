@@ -1,5 +1,4 @@
-import React from 'react';
-
+// Eliminamos React import ya que no se usa directamente
 const LoadingSpinner = () => {
   return (
     <div className="flex justify-center items-center py-12">

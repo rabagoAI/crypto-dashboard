@@ -1,4 +1,3 @@
-import React from 'react';
 import { X, Star, ExternalLink } from 'lucide-react';
 import type { CryptoCurrency } from '../../types/crypto';
 import { useCryptoStore } from '../../stores/cryptoStore';
@@ -15,7 +14,8 @@ const CryptoDetailModal: React.FC<CryptoDetailModalProps> = ({
   isOpen,
   onClose
 }) => {
-  const { favorites, addFavorite, removeFavorite, isFavorite } = useCryptoStore();
+  // Removemos favorites ya que no se usa directamente
+  const { addFavorite, removeFavorite, isFavorite } = useCryptoStore();
 
   if (!isOpen || !crypto) return null;
 

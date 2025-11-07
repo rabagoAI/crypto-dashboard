@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+// Elimina React import si no se usa directamente
+import { useState } from 'react';
 import { Grid, Table } from 'lucide-react';
 import Header from './components/layout/Header';
 import CryptoGrid from './components/crypto/CryptoGrid';
@@ -19,7 +20,7 @@ function App() {
     error, 
     searchQuery, 
     setSearchQuery, 
-    filter, 
+    // Removemos filter ya que no se usa directamente
     setFilter, 
     filteredCryptos 
   } = useCryptoData();

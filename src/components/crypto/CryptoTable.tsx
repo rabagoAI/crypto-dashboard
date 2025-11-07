@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, TrendingUp, TrendingDown } from 'lucide-react';
 import type { CryptoCurrency } from '../../types/crypto';
 import { useCryptoStore } from '../../stores/cryptoStore';
@@ -8,7 +7,8 @@ interface CryptoTableProps {
 }
 
 const CryptoTable: React.FC<CryptoTableProps> = ({ cryptos }) => {
-  const { favorites, addFavorite, removeFavorite, isFavorite } = useCryptoStore();
+  // Removemos favorites ya que no se usa directamente
+  const { addFavorite, removeFavorite, isFavorite } = useCryptoStore();
 
   const formatPrice = (price: number): string => {
     return price.toLocaleString('en-US', {

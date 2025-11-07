@@ -1,4 +1,3 @@
-import React from 'react';
 import { Star, TrendingUp, TrendingDown } from 'lucide-react';
 import type { CryptoCurrency } from '../../types/crypto';
 import { useCryptoStore } from '../../stores/cryptoStore';
@@ -9,7 +8,8 @@ interface CryptoCardProps {
 }
 
 const CryptoCard: React.FC<CryptoCardProps> = ({ crypto, onViewDetails }) => {
-  const { favorites, addFavorite, removeFavorite, isFavorite } = useCryptoStore();
+  // Removemos favorites ya que no se usa directamente
+  const { addFavorite, removeFavorite, isFavorite } = useCryptoStore();
   
   const isPositive = crypto.price_change_percentage_24h > 0;
   const isFav = isFavorite(crypto.id);
