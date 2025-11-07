@@ -10,12 +10,14 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      external: [
-        'react-is'
-      ]
+      // NO externalizar react-is, dejar que Vite lo maneje
     }
   },
   optimizeDeps: {
     include: ['react-is']
+  },
+  resolve: {
+    // Esto ayuda a Vite a resolver correctamente las dependencias
+    dedupe: ['react', 'react-dom', 'react-is']
   }
 })
