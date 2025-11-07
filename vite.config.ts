@@ -7,5 +7,15 @@ export default defineConfig({
   server: {
     port: 5173,
     host: true
+  },
+  build: {
+    rollupOptions: {
+      external: [
+        'react-is'
+      ]
+    }
+  },
+  optimizeDeps: {
+    include: ['react-is']
   }
 })
